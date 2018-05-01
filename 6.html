@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.0/dist/aframe-extras.min.js"></script>
+</head>
+
+<body class="a-body ">
+    <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+        <canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>
+        <a-assets>
+
+            <a-asset-item id="man" src="assets/CesiumMan.glb"></a-asset-item>
+
+            <a-asset-item id="astronaut" src="assets/astronaut-walk/astro-idle-walkblend.gltf"></a-asset-item>
+        </a-assets>
+
+        <!-- <a-entity gltf-model="#astronaut" animation-mixer position="0 0 -2"></a-entity> -->
+
+        <a-entity light="type:ambient;intensity:4;angle:0" position="0 0.251 -0.016386355721185214" rotation=""></a-entity>
+        <a-entity gltf-model="assets/astronaut-walk/astro-idle-walkblend.gltf" scale="10 10 10" rotation="0 3.142 0" animation-mixer=""
+            shadow="">
+        </a-entity>
+        <!-- <a-entity id="walker" gltf-model="#walking" position="0 0 0" > -->
+
+        <!-- <a-entity id="walker" gltf-model-legacy="#walking" > -->
+        <!-- <a-entity gltf-model="#man" animation-mixer position="0 0 -2"></a-entity> -->
+        <!-- 
+           -->
+        <!-- <a-entity collada-model="#walking" position="0 0 -2" scale="20 20 20" animation-mixer></a-entity> -->
+        <!-- <a-gltf-model src="assets/walk.glb"></a-gltf-model> -->
+
+        <!-- <a-collada-model src="#walking-dae" scale="10 10 10" position="0 0 -2" animation-mixer></a-collada-model>  -->
+
+        <!-- <a-gltf-model src="assets/walking-astro/walking-astro.glb"></a-gltf-model> -->
+        <!-- 
+            <a-entity id="walker" gltf-model="#walking" >
+            </a-entity> -->
+    </a-scene>
+    <span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@2x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer;"></span>
+</body>
+
+</html>

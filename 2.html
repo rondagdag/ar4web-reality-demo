@@ -1,0 +1,56 @@
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<!--<script src="https://cdn.glitch.com/f7dc9794-81a6-439a-b06e-4ef0f7030770%2Faframe-ar.js?1525005861968"></script>-->
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+<style>
+#arjsDebugUIContainer {
+  display: none !important;
+}
+
+</style>
+<body style='margin : 0px; overflow: hidden;'>
+   
+ <!-- <a-scene embedded arjs='sourceType: webcam;'> -->
+<a-scene embedded arjs='debug: false; trackingMethod: best;' raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" >
+      <a-assets>
+        <img id="hackster" crossOrigin="anonymous" src="assets/hackster-logo.png">
+        <img id="linkedin" crossOrigin="anonymous" src="assets/linkedin-logo.png">
+        <img id="mvp" crossOrigin="anonymous" src="assets/mvp-logo.png">
+        <img id="twitter" crossOrigin="anonymous" src="assets/twitter-logo.png">
+</a-assets>
+
+  <a-marker-camera type="pattern" url="assets/ron-marker.patt">
+  </a-marker-camera>
+  
+    <a-link href="http://www.dagdag.net" title="" position="-0.75 0 0" visualaspectenabled="false" rotation="270 0 0" scale="0.25 0.25 0.25" geometry="primitive:circle;segments:64" material="strokeColor:#797979;shader:portal;side:double" link="color:#797979;visualAspectEnabled:false" link="">
+      <a-entity position="0 0 0.5" rotation="90 0 0">
+        <a-image src="#hackster" position="0 0 0.01" material="" geometry="">
+        <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+      </a-image>
+      </a-entity>
+    </a-link>
+    <a-link href="http://ron.dagdag.net" title="" position="-0.45 0 -1" visualaspectenabled="false" rotation="270 0 0" scale="0.25 0.25 0.25" geometry="primitive:circle;segments:64" material="strokeColor:#797979;shader:portal;side:double" link="color:#797979;visualAspectEnabled:false" link="">
+      <a-entity position="0 0 0.5" rotation="90 0 0">
+          <a-image src="#linkedin" position="0 0 0.01" material="" geometry="">
+            <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-image>
+      </a-entity>
+    </a-link>
+    <a-link href="https://mvp.microsoft.com/en-us/PublicProfile/5002483" title="" visualaspectenabled="false" position="0.45 0 -1" rotation="270 0 0" scale="0.25 0.25 0.25" geometry="primitive:circle;segments:64" material="strokeColor:#797979;shader:portal;side:double" link="color:#797979;visualAspectEnabled:false" link="">
+      <a-entity position="0 0 0.5" rotation="90 0 0">
+        <a-image src="#mvp" position="0 0 0.01" material="" geometry="">
+            <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+      </a-image>
+    </a-entity>
+    </a-link>
+    <a-link href="https://twitter.com/rondagdag" title="" visualaspectenabled="false" position="0.75 0 0" rotation="270 0 0" scale="0.25 0.25 0.25" geometry="primitive:circle;segments:64" material="strokeColor:#797979;shader:portal;side:double" link="color:#797979;visualAspectEnabled:false" link="">
+      <a-entity position="0 0 0.5" rotation="90 0 0">
+          <a-image src="#twitter" position="0 0 0.01" material="" geometry="">
+            <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-image>
+      </a-entity>
+    </a-link>
+ 
+
+	</a-scene>
+  <button id="play_button">Play</button>
+</body>
